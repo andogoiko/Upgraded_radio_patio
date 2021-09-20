@@ -5,21 +5,21 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>TITLE</title>
     <link rel="stylesheet" href="styles/main.sass">
 </head>
 <body>
     <header>
-
+        <block name="header"><include src="partial/header.html"></include></block>
     </header>
     <section>
-
+        <block name="content"><include src="partial/content.html"></include></block>
     </section>
     <aside>
-
+        <block name="sidebar"><include src="partial/sidebar.html"></include></block>
     </aside>
     <footer>
-
+        <block name="footer"><include src="partial/footer.html"></include></block>
     </footer>
 </body>
 </html>

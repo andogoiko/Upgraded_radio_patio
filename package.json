@@ -1,17 +1,19 @@
 {
-  "name": "uno",
-  "version": "0.0.1",
-  "description": "Exercise one",
-  "repository": "https://github.com/mmozos/DIW1",
+  "name": "dos",
+  "version": "0.0.2",
+  "description": "Exercise two",
+  "repository": "https://github.com/mmozos/DIW",
   "author": "mmozos <martinmozos@gmail.com>",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "parcel build index.html",
-    "start": "parcel serve index.html --open"
+    "build": "parcel build *.html",
+    "start": "parcel serve *.html --open"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "2.0.0-rc.0",
-    "parcel": "^2.0.0-rc.0"
+    "parcel": "^2.0.0-rc.0",
+    "posthtml-extend": "^0.6.0",
+    "posthtml-include": "^1.7.1"
   }
 }
