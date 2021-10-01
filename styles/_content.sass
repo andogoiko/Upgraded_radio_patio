@@ -1,24 +1,29 @@
 @import 'mixins/main'
 
+$spacing: 1rem
+
+header, section, aside, footer
+  border-radius: $spacing / 2
+
 header
   @include background(#FEFF00FF, #0001FFFF)
-  height: calc(25% - 2rem)
-  margin: 1rem
-  width: calc(100% - 2rem)
+  height: calc(25% - #{$spacing})
+  margin: $spacing / 2
+  width: calc(100% - #{$spacing})
 
 section
   background-color: bisque
   height: 60%
-  margin: 0 1rem
-  width: calc(80% - 2rem)
+  margin: 0 $spacing / 2
+  width: calc(80% - #{$spacing})
 
 aside
   background-color: cornflowerblue
   height: 60%
-  width: calc(20% - 1rem)
+  width: calc(20% - #{$spacing} / 2)
 
 footer
   @include background(#0037ff, #84ff00)
-  height: calc(15% - 2rem)
-  margin: 1rem
-  width: calc(100% - 2rem)
+  height: calc(15% - #{$spacing})
+  margin: $spacing / 2
+  width: calc(100% - #{$spacing})
