@@ -2,28 +2,30 @@
 
 $spacing: 1rem
 
-header, section, aside, footer
+header, header .navbar, header .navbar .container-fluid, main, aside, footer
   border-radius: $spacing / 2
 
 header
   @include background(#FEFF00FF, #0001FFFF)
-  height: calc(25% - #{$spacing})
+  display: flex
+  height: calc(7.75% - #{$spacing})
   margin: $spacing / 2
   width: calc(100% - #{$spacing})
+  @import 'menu'
 
 main
   background-color: bisque
-  height: 60%
+  height: 88%
   margin: 0 $spacing / 2
   width: calc(80% - #{$spacing})
 
 aside
   background-color: cornflowerblue
-  height: 60%
+  height: 88%
   width: calc(20% - #{$spacing} / 2)
 
 footer
   @include background(#0037ff, #84ff00)
-  height: calc(15% - #{$spacing})
+  height: calc(4.25% - #{$spacing})
   margin: $spacing / 2
   width: calc(100% - #{$spacing})
