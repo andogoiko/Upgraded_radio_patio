@@ -1,9 +1,21 @@
 <extends src="index.html">
     <block name="styles" type="append">
-        <!-- more styles -->
+        <link rel="stylesheet" href="styles/form.sass">
     </block>
     <block name="content">
-        FORMULARIO
+        <div class="login-box text-center">
+            <form>
+                <div class="user-box">
+                    <input id="username" type="text" name="" placeholder="Username" required="">
+                    <label for="username">Username</label>
+                </div>
+                <div class="user-box">
+                    <input id="password" type="password" name="" placeholder="Password" required="">
+                    <label for="password">Password</label>
+                </div>
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </form>
+        </div>
     </block>
     <block name="scripts" type="append">
         <!-- more scripts -->

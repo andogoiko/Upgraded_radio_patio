@@ -1,0 +1,49 @@
+
+// @see https://codepen.io/soufiane-khalfaoui-hassani/pen/LYpPWda
+
+.login-box
+  position: absolute
+  top: 50%
+  left: 50%
+  width: 400px
+  padding: 40px
+  transform: translate(-50%, -50%)
+  background: rgba(black, 0.3)
+  box-sizing: border-box
+  box-shadow: 0 15px 25px rgba(black, 0.6)
+  border-radius: 10px
+
+  .user-box
+    position: relative
+
+    input
+      width: 100%
+      padding: 10px 0
+      font-size: 16px
+      color: white
+      margin-bottom: 30px
+      border: none
+      border-bottom: 1px solid black
+      outline: none
+      background: transparent
+      transition: border-bottom-color 500ms ease-out
+
+      &:focus, &:valid
+        border-bottom-color: white
+        transition: border-bottom-color 500ms ease-in
+
+        &+label
+          top: -20px
+          left: 0
+          //color: #030ff4
+          font-size: 12px
+
+    label
+      position: absolute
+      top: 0
+      left: 0
+      padding: 10px 0
+      font-size: 16px
+      color: white
+      pointer-events: none
+      transition: .5s
