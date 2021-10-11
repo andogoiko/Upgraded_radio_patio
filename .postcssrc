@@ -1,5 +1,8 @@
 {
   "plugins": {
-    "autoprefixer": true
+    "autoprefixer": true,
+    "postcss-uncss": {
+      "html": ["dist/index.html", "dist/form.html"]
+    }
   }
 }
