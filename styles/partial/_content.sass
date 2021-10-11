@@ -1,34 +1,43 @@
 @use 'sass:math'
 
 header, header .navbar, header .navbar .container-fluid, main, aside, footer
-  border-radius: math.div($spacing, 2)
+    border-radius: math.div($spacing, 2)
 
 header
-  height: calc(7.75% - #{$spacing})
-  margin: math.div($spacing, 2)
-  width: calc(100% - #{$spacing})
-  z-index: 1
+    height: calc(7.75% - #{$spacing})
+    margin: math.div($spacing, 2)
+    width: calc(100% - #{$spacing})
+    z-index: 1
 
-  .logo
-    font-size: $spacing * 3
-    transition: 3s
+    .logo
+        font-size: $spacing * 3
+        transition: 3s
 
-  &:hover .logo
-    transform: rotate(1080deg)
+    &:hover .logo
+        transform: rotate(1080deg)
 
-  @import 'menu'
+    @import 'menu'
 
 main
-  height: 88.5%
-  margin: 0 math.div($spacing, 2)
-  overflow-y: auto
-  width: calc(80% - #{$spacing})
+    height: 88.5%
+    margin: 0 math.div($spacing, 2)
+    overflow-y: auto
+    width: calc(100% - #{$spacing})
 
 aside
-  height: 88.5%
-  width: calc(20% - #{$spacing} / 2)
+    display: none
 
 footer
-  height: calc(3.75% - #{$spacing})
-  margin: math.div($spacing, 2)
-  width: calc(100% - #{$spacing})
+    height: calc(3.75% - #{$spacing})
+    margin: math.div($spacing, 2)
+    width: calc(100% - #{$spacing})
+
+@media (min-width: 992px)
+    main
+        width: calc(80% - #{$spacing})
+
+    aside
+        display: block
+        height: 88.5%
+        overflow-y: auto
+        width: calc(20% - #{$spacing} / 2)
