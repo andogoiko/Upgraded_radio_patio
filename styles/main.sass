@@ -1,18 +1,35 @@
 @import url('https://rsms.me/inter/inter-ui.css')
+@import 'partial/variables'
 
-*
-  box-sizing: border-box
+*, *::after, *::before
+    box-sizing: border-box
 
+html
+    block-size: 100%
+    inline-size: 100%
+
+/* uncss:ignore start */
 body
-  font:
-    family: 'Inter UI', sans-serif
-    style: normal
-    size: medium
-  flex-wrap: wrap
-  height: 100vh
-  margin: 0
-  overflow-y: hidden
-  padding: 0
-  width: 100vw
+    background-size: cover
+    font:
+        family: 'Inter UI', sans-serif
+        style: normal
+        size: medium
+    flex-wrap: wrap
+    height: 100vh
+    min-block-size: 100%
+    min-inline-size: 100%
+    margin: 0
+    overflow-y: hidden
+    padding: 0
+    width: 100vw
 
-  @import 'content'
+    &.bg-dark
+        background-image: url('../images/desert-dark.svg')
+
+    &.bg-light
+        background-image: url('../images/desert-light.svg')
+
+    @import 'partial/main'
+    @import 'partial/content'
+/* uncss:ignore end */

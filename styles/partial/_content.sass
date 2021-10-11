@@ -1,7 +1,5 @@
 @use 'sass:math'
 
-$spacing: 1rem
-
 header, header .navbar, header .navbar .container-fluid, main, aside, footer
   border-radius: math.div($spacing, 2)
 
@@ -10,17 +8,23 @@ header
   margin: math.div($spacing, 2)
   width: calc(100% - #{$spacing})
   z-index: 1
+
+  .logo
+    font-size: $spacing * 3
+    transition: 3s
+
+  &:hover .logo
+    transform: rotate(1080deg)
+
   @import 'menu'
 
 main
-  background-color: bisque
   height: 88.5%
   margin: 0 math.div($spacing, 2)
   overflow-y: auto
   width: calc(80% - #{$spacing})
 
 aside
-  background-color: cornflowerblue
   height: 88.5%
   width: calc(20% - #{$spacing} / 2)
 

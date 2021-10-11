@@ -1,0 +1,64 @@
+
+// @see https://codepen.io/soufiane-khalfaoui-hassani/pen/LYpPWda
+
+main
+    background-image: url('../images/sign_in.svg')
+    background-size: cover
+
+    .login-box
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 400px
+        padding: 40px
+        transform: translate(-50%, -50%)
+        box-sizing: border-box
+        border-radius: 10px
+
+        .user-box
+            position: relative
+
+            input
+                width: 100%
+                padding: 10px 0
+                font-size: $spacing
+                margin-bottom: $spacing * 2
+                border: none
+                outline: none
+                background: transparent
+
+                &:focus, &:valid
+                    &+label
+                        top: -20px
+                        left: 0
+                        //color: #030ff4
+                        font-size: 12px
+
+            label
+                position: absolute
+                top: 0
+                left: 0
+                padding: 10px 0
+                font-size: $spacing
+                pointer-events: none
+                transition: .5s
+
+@mixin form($animation-duration, $color-dark, $color-light)
+
+    .login-box
+        background: rgba($color-dark, 0.3)
+        box-shadow: 0 15px 25px rgba($color-dark, 0.6)
+
+        .user-box
+
+            input
+                color: $color-light
+                border-bottom: 1px solid $color-dark
+                transition: border-bottom-color $animation-duration ease-out
+
+                &:focus, &:valid
+                    border-bottom-color: $color-light
+                    transition: border-bottom-color $animation-duration ease-in
+
+            label
+                color: $color-light
