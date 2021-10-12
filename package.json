@@ -7,10 +7,10 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "parcel build *.html",
-    "prebuild": "posthtml -o dist -i index.html form.html -c .posthtmlrc",
-    "prestart": "posthtml -o dist -i index.html form.html -c .posthtmlrc",
-    "start": "parcel serve *.html --open"
+    "build": "parcel build templates/*.html",
+    "prebuild": "posthtml -o dist -i templates/index.html templates/form.html -c .posthtmlrc",
+    "prestart": "posthtml -o dist -i templates/index.html templates/form.html -c .posthtmlrc",
+    "start": "parcel serve templates/*.html --open"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "2.0.0-rc.0",
