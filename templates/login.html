@@ -1,0 +1,44 @@
+<extends src="index.html">
+    <block name="styles" type="append">
+        <link rel="stylesheet" href="../styles/login.sass">
+    </block>
+    <block name="content">
+        <div class="d-flex align-items-center h-100">
+            <!-- @see https://codepen.io/ainalem/pen/EQXjOR -->
+            <div class="container text-center">
+                <div class="left">
+                    <div class="login">Login</div>
+                    <div class="eula">By logging in you agree to the ridiculously long terms that you didn't bother to read</div>
+                </div>
+                <div class="right">
+                    <svg viewBox="0 0 320 300">
+                        <defs>
+                            <linearGradient
+                                    id="linearGradient"
+                                    x1="13"
+                                    y1="193.49992"
+                                    x2="307"
+                                    y2="193.49992"
+                                    gradientUnits="userSpaceOnUse">
+                                <stop offset="0" id="stop876" />
+                                <stop offset="1" id="stop878" />
+                            </linearGradient>
+                        </defs>
+                        <path d="m 40,120.00016 239.99984,-3.2e-4 c 0,0 24.99263,0.79932 25.00016,35.00016 0.008,34.20084 -25.00016,35 -25.00016,35 h -239.99984 c 0,-0.0205 -25,4.01348 -25,38.5 0,34.48652 25,38.5 25,38.5 h 215 c 0,0 20,-0.99604 20,-25 0,-24.00396 -20,-25 -20,-25 h -190 c 0,0 -20,1.71033 -20,25 0,24.00396 20,25 20,25 h 168.57143" />
+                    </svg>
+                    <div class="form">
+                        <label for="email"></label>
+                        <input type="email" id="email" placeholder="Email">
+                        <label for="password"></label>
+                        <input type="password" id="password" placeholder="Password">
+                        <input type="submit" id="submit" value="Submit">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </block>
+    <block name="scripts" type="append">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js" integrity="sha512-X8lZKRjcVNiBSXn7PNdIncguzX4v8peKIuD9DpNQJqOmKrH4KFvYkDBYdJikYBmghypYSQ+nBlclJsACfDhaKw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="../scripts/login.js"></script>
+    </block>
+</extends>

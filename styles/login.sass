@@ -1,0 +1,114 @@
+
+// @see https://codepen.io/ainalem/pen/EQXjOR
+
+/* uncss:ignore start */
+\::selection
+  background: #2D2F36
+
+.container
+  display: flex
+  //font-family: 'Inter UI', sans-serif
+  height: 320px
+  margin: 0 auto
+  width: 640px
+
+  .left
+    background: white
+    height: calc(100% - 40px)
+    top: 20px
+    position: relative
+    width: 50%
+
+    .login
+      font-size: 50px
+      font-weight: 900
+
+    .eula
+      color: #999
+      font-size: 14px
+      line-height: 1.5
+      margin: 40px
+
+  .right
+    background: #474A59
+    box-shadow: 0 0 40px 16px rgba(0, 0, 0, 0.22)
+    color: #F1F1F2
+    position: relative
+    width: 50%
+
+    svg
+      left: 0
+      position: absolute
+      width: 320px
+
+      defs > #linearGradient > stop
+        &:nth-child(odd)
+          stop-color: #ffdd00
+        &:nth-child(even)
+          stop-color: #0033ff
+
+      path
+        fill: none
+        stroke: url(#linearGradient)
+        stroke-width: 4
+        stroke-dasharray: 240 1386
+
+    .form
+      margin: 40px
+      position: absolute
+
+      label
+        color: #c2c2c5
+        display: block
+        font-size: 14px
+        height: 16px
+        margin-top: 20px
+        margin-bottom: 5px
+
+      input
+        background: transparent
+        border: 0
+        color: #f2f2f2
+        font-size: 20px
+        height: 30px
+        line-height: 30px
+        outline: none !important
+        width: 100%
+
+        &::-moz-focus-inner
+          border: 0
+
+      #submit
+        color: #707075
+        margin-top: 40px
+        transition: color 300ms
+
+        &:focus
+          color: #f2f2f2
+
+        &:active
+          color: #d0d0d2
+
+@media (max-width: 767px)
+  .container
+    flex-direction: column
+    height: 630px
+    width: 320px
+
+    .left
+      height: 100%
+      left: 20px
+      width: calc(100% - 40px)
+      max-height: 270px
+
+    .right
+      flex-shrink: 0
+      height: 100%
+      width: 100%
+      max-height: 350px
+
+@media (min-width: 768px)
+  .container .left .login
+    margin: 50px 40px 40px
+
+/* uncss:ignore end */
