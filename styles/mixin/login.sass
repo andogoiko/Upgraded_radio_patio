@@ -1,0 +1,36 @@
+
+@mixin login($color-dark, $color-light)
+
+    .container
+
+        .left
+            background: $color-light
+
+            .eula
+                color: rgba($color-dark, 0.77)
+
+        .right
+            background: rgba($color-dark, 0.92)
+            box-shadow: 0 0 40px 16px rgba($color-dark, 0.22)
+            color: $color-light
+
+            svg defs > #linearGradient > stop
+                &:nth-child(odd)
+                    stop-color: $color-dark
+                &:nth-child(even)
+                    stop-color: $color-light
+
+            .form
+
+                label
+                    color: rgba($color-light, 0.92)
+
+                input
+                    color: $color-light
+
+                #submit
+                    color: rgba($color-light, 0.5)
+
+                    &:focus,
+                    &:active
+                        color: $color-light

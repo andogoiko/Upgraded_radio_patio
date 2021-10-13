@@ -3,112 +3,102 @@
 
 /* uncss:ignore start */
 \::selection
-  background: #2D2F36
+    background: #2D2F36
 
-.container
-  display: flex
-  //font-family: 'Inter UI', sans-serif
-  height: 320px
-  margin: 0 auto
-  width: 640px
+@import 'partial/variables'
+@import 'mixin/login'
 
-  .left
-    background: white
-    height: calc(100% - 40px)
-    top: 20px
-    position: relative
-    width: 50%
+body
 
-    .login
-      font-size: 50px
-      font-weight: 900
+    &.bg-dark
+        @include login($dark_primary, $dark_secondary)
 
-    .eula
-      color: #999
-      font-size: 14px
-      line-height: 1.5
-      margin: 40px
+    &.bg-light
+        @include login($light_primary, $light_secondary)
 
-  .right
-    background: #474A59
-    box-shadow: 0 0 40px 16px rgba(0, 0, 0, 0.22)
-    color: #F1F1F2
-    position: relative
-    width: 50%
+    .container
+        height: 320px
+        width: 640px
 
-    svg
-      left: 0
-      position: absolute
-      width: 320px
+        .left
+            //background: white
+            height: calc(100% - 40px)
+            top: 20px
+            position: relative
+            width: 50%
 
-      defs > #linearGradient > stop
-        &:nth-child(odd)
-          stop-color: #ffdd00
-        &:nth-child(even)
-          stop-color: #0033ff
+            .login
+                font-size: 50px
+                font-weight: 900
 
-      path
-        fill: none
-        stroke: url(#linearGradient)
-        stroke-width: 4
-        stroke-dasharray: 240 1386
+            .eula
+                font-size: 14px
+                line-height: 1.5
+                margin: 40px
 
-    .form
-      margin: 40px
-      position: absolute
+        .right
+            position: relative
+            width: 50%
 
-      label
-        color: #c2c2c5
-        display: block
-        font-size: 14px
-        height: 16px
-        margin-top: 20px
-        margin-bottom: 5px
+            svg
+                left: 0
+                position: absolute
+                width: 320px
 
-      input
-        background: transparent
-        border: 0
-        color: #f2f2f2
-        font-size: 20px
-        height: 30px
-        line-height: 30px
-        outline: none !important
-        width: 100%
+                path
+                    fill: none
+                    stroke: url(#linearGradient)
+                    stroke-width: 4
+                    stroke-dasharray: 240 1386
 
-        &::-moz-focus-inner
-          border: 0
+            .form
+                margin: 40px
+                position: absolute
 
-      #submit
-        color: #707075
-        margin-top: 40px
-        transition: color 300ms
+                label
+                    display: block
+                    font-size: 14px
+                    height: 16px
+                    margin-top: 20px
+                    margin-bottom: 5px
 
-        &:focus
-          color: #f2f2f2
+                input
+                    background: transparent
+                    border: 0
+                    font-size: 20px
+                    height: 30px
+                    line-height: 30px
+                    outline: none !important
+                    width: 100%
 
-        &:active
-          color: #d0d0d2
+                    &::-moz-focus-inner
+                        border: 0
 
-@media (max-width: 767px)
-  .container
-    flex-direction: column
-    height: 630px
-    width: 320px
+                #submit
+                    margin-top: 40px
+                    transition: color 300ms
 
-    .left
-      height: 100%
-      left: 20px
-      width: calc(100% - 40px)
-      max-height: 270px
+    @media (max-width: 767px)
+        .container
+            flex-direction: column
+            height: 630px
+            width: 320px
 
-    .right
-      flex-shrink: 0
-      height: 100%
-      width: 100%
-      max-height: 350px
+            .left
+                height: 100%
+                left: 20px
+                max-height: 270px
+                top: 0
+                width: calc(100% - 40px)
 
-@media (min-width: 768px)
-  .container .left .login
-    margin: 50px 40px 40px
+            .right
+                flex-shrink: 0
+                height: 100%
+                max-height: 350px
+                width: 100%
+
+    @media (min-width: 768px)
+        .container .left .login
+            margin: 50px 40px 40px
 
 /* uncss:ignore end */
