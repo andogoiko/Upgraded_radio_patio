@@ -8,16 +8,14 @@
   "private": true,
   "scripts": {
     "build": "parcel build templates/*.html",
-    "prebuild": "posthtml -o dist -i templates/*.html -c .posthtmlrc",
-    "prestart": "posthtml -o dist -i templates/*.html -c .posthtmlrc",
+    "prebuild": "cp -rv media dist",
+    "prestart": "cp -rv media dist",
     "start": "parcel serve templates/*.html --open"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "2.0.0",
     "autoprefixer": "^10.3.7",
     "parcel": "^2.0.0",
-    "postcss-uncss": "^0.17.0",
-    "posthtml-cli": "^0.10.0",
     "posthtml-extend": "^0.6.0",
     "posthtml-include": "^1.7.2"
   }
