@@ -8,8 +8,6 @@
   "private": true,
   "scripts": {
     "build": "parcel build templates/*.html",
-    "prebuild": "cp -rv media dist",
-    "prestart": "cp -rv media dist",
     "start": "parcel serve templates/*.html --open"
   },
   "devDependencies": {

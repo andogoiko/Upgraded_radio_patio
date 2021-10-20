@@ -155,7 +155,7 @@ const webm = document.getElementById('webm');
 const selected = document.getElementById('selected');
 let mp4Url = '';
 let webmUrl = '';
-function playVid(ID) {
+function playVideo(ID) {
 	switch (ID) {
 		case 1:
 			mp4Url = 'https://www.fredrickjaxx.is/_assets/video/blossoms.mp4';

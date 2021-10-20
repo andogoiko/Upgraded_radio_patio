@@ -68,13 +68,14 @@
         </div>
     </block>
     <block name="sidebar">
-        <div class="d-flex justify-content-center">
-			<div class="thumb" onclick="playVid(1)">one</div>
-			<div class="thumb" onclick="playVid(2)">two</div>
-			<div class="thumb" onclick="playVid(3)">three</div>
-			<div class="thumb" onclick="playVid(4)">four</div>
+        <h2 class="text-center">Videos</h2>
+        <section class="d-flex justify-content-center">
+			<div class="thumb" onclick="playVideo(1)">one</div>
+			<div class="thumb" onclick="playVideo(2)">two</div>
+			<div class="thumb" onclick="playVideo(3)">three</div>
+			<div class="thumb" onclick="playVideo(4)">four</div>
             <input id="selected" type="hidden">
-		</div>
+		</section>
     </block>
     <block name="scripts" type="append">
         <script src="../scripts/play.js"></script>
