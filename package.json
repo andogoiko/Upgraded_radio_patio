@@ -1,13 +1,15 @@
 {
-  "name": "dos",
-  "version": "0.0.2",
+  "name": "radio_Maria",
+  "version": "0.0.1",
   "description": "Exercise two",
-  "repository": "https://github.com/mmozos/DIW",
-  "author": "mmozos <martinmozos@gmail.com>",
+  "repository": "https://github.com/andogoiko/Upgraded_radio_patio",
+  "author": "andogoiko <andoitz.goico@gmail.com>",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "parcel build templates/*.html",
+    "build": "parcel build templates/*.html --public-url /2daw3/andoitzg/DIW/Audio/",
+    "prebuild": "(test -d dist || mkdir dist) && cp -rv media dist",
+    "prestart": "yarn prebuild",
     "start": "parcel serve templates/*.html --open"
   },
   "devDependencies": {
